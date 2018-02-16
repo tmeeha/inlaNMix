@@ -1,0 +1,48 @@
+JSS 3107: Timothy D Meehan, Nicole L Michel, Haavard Rue
+
+Estimating Animal Abundance with N-Mixture Models Using the R-INLA Package for R
+---------------------------------------------------------
+For further instructions on JSS style requirements please see the Style Files (in particular section 2.1 Style Checklist of jss.pdf) and FAQ at http://www.jstatsoft.org/about/submissions.
+
+For further examples please see RECENT JSS papers.
+---------------------------------------------------------
+
+From the editorial team:
+
+o We feel your submission is a code snippet rather than a full article. Please use the code snippet template with your resubmission.
+
+The authors explore how certain wildlife abundance models can be implemented using the R packages "runjags", "unmarked" and "INLA" where special focus is given to the latter. Except for the replication code showing how to implement the models and data-generating processes for the artificial examples there is no new software associated with the submission.
+
+Hence this is not suitable as a regular article for JSS. However, we might consider a revised version for our "Code Snippets" section. In particular for JSS readers it is important to be easily able to apply the discussed software to their own data and research questions. Hence, please enhance your replication materials by separating the general modeling approach from your specific application. Ideally, there would be functions for fitting the discussed models that are easily applicable to new data as well. This would embellish the contribution and be of more interest to JSS's audience. Packaging up functionality should also allow to considerably reduce the code shown in the manuscript because functions are called and it should be easier to guide the reader through the different use cases.
+
+Furthermore, a better overview on statistical software packages available to fit this kind of models needs to be provided and some insights provided how the three ones used in the comparison were selected, e.g., provide information why BUGS or Stan are not considered.
+
+
+Manuscript style comments:
+
+
+o The code presented in the manuscript should not contain comments within the verbatim code. Instead the comments should be made in the normal LaTeX text.
+
+o For the code layout in R publications, we typically distinguish input/output using Sinput/Soutput (or equivalently CodeInput/CodeOutput). Unless there are special reasons to format it differently, the input should use the text width (up to 76 or 77 characters) and be indented by two spaces, e.g.,
+
+begin{Sinput}
+R> example_model <- lm(response ~ variable1 + variable2 + variable3, 
++    weights = w, data = mydata)
+\end{Sinput}
+
+o Code should have enough spaces to facilitate reading.  Please include spaces before and after operators and after commas (unless spaces have syntactical meaning).
+
+o As a reminder, please make sure that:
+	- \proglang, \pkg and \code have been used for highlighting throughout the paper (including titles and references), except where explicitly escaped.
+
+
+References:
+
+o Please make sure that all software packages are \cite{}'d properly.
+o All references should be in title style.
+o See FAQ for specific reference instructions.
+
+
+Code:
+
+o Please make sure that the files needed to replicate all code/examples within the manuscript are included in a standalone replication script.
