@@ -4,19 +4,18 @@
 ## inla.nmix.lambda.fitted() function ##########################################
 ##
 ## The inla.nmix.lambda.fitted() function is a helper function for taking an
-## 'nmix' or 'nmixnb' model, and calculating detection-corrected abundance
-## values for each site or site-by-year combination in the data, using the
-## linear predictor for lambda (hereafter, 'fitted values').
+## 'nmix' or 'nmixnb' model, and computing expected abundance values for each
+## site or site-by-year combination in the data, using the linear predictor for ## lambda (hereafter, 'fitted values').
 ##
 ## The uncertainty associated with fitted values derives from repeated sampling
 ## of INLA posteriors for the parameters of the linear predictor, and repeated
 ## solving of the linear predictor equation for each site or site-by-year
-## combination. By default, fitted values are back-transformed to the count
+## combination. By default, fitted values are exponentiated to the count
 ## scale, and summaries of approximate fitted posteriors are returned by the
-## function. Full approximate posteriors of fitted values are also available as
+## function. Full estimated posteriors of fitted values are also available as
 ## an optional output.
 ##
-## Tim Meehan, 14 February 2018. ###############################################
+## Tim Meehan, 16 February 2018. ###############################################
 
 
 
@@ -24,12 +23,16 @@
 inla.nmix.lambda.fitted <- function(result, sample.size=1000,
                                     return.posteriors=FALSE,
                                     scale="exp"){
-  # Verify appropriate model type
+  # Checks and warnings
   library(INLA)
   fam <- result$.args$family
   if(length(grep(pattern = "nmix", x = fam)) == 0) {
     stop("This function is only for models with 'nmix' or 'nmixnb' likelihoods")
   }
+  if(missing(result)) stop("Please specify a model result")
+  s.check <- as.numeric(scale == "exp") + as.numeric(scale == "log")
+  if(s.check == 0) stop("Scale must be set to 'exp' or 'log'")
+  if(sample.size < 500) warning("Please increase the sample size")
 
   # Get counts and lambda covariates from 'inla.mdata' object
   mdata.obj <- result$.args$data[[1]]
@@ -58,7 +61,7 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
   # For each site or site-by-year combination
   for(i in 1:n.data){
     obs <- lambda.covs[i,]
-    # For each sample from the hyperparameter approximate marginal posterior
+    # For each sample from the hyperparameter posterior
     for(j in 1:sample.size){
       post <- hyperpar.samples[j, ]
       fitted <- sum(obs * post)
@@ -87,16 +90,11 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
     ux[which.max(tabulate(match(x, ux)))]
   }
   fitted.modes <- round(apply(fitted.posteriors, 1, Mode), 4)
-  #observed.counts <- cbind(index, counts)
-  #mean.count <- round(apply(counts, 1, mean), 4)
-  #max.count <- apply(counts, 1, max)
   fitted.summary <- data.frame(mean.lambda=fitted.means, sd.lambda=fitted.sds,
                                quant025.lambda=fitted.q025,
                                median.lambda=fitted.q500,
                                 quant975.lambda=fitted.q975,
                                mode.lambda=fitted.modes)
-  # fitted.summary <- cbind(observed.counts, mean.count, max.count,
-  #                         fitted.summary)
   fitted.summary <- cbind(index, fitted.summary)
   fitted.posteriors <- cbind(index, fitted.posteriors)
 
@@ -108,6 +106,7 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
     out <- list(fitted.summary=fitted.summary)
   }
   return(out)
-} # End function ###############################################################
+
+  } # End function ###############################################################
 
 
