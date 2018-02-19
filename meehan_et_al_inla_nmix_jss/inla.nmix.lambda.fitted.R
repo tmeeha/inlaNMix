@@ -5,7 +5,8 @@
 ##
 ## The inla.nmix.lambda.fitted() function is a helper function for taking an
 ## 'nmix' or 'nmixnb' model, and computing expected abundance values for each
-## site or site-by-year combination in the data, using the linear predictor for ## lambda (hereafter, 'fitted values').
+## site or site-by-year combination in the data, using the linear predictor for
+## lambda (hereafter, 'fitted values').
 ##
 ## The uncertainty associated with fitted values derives from repeated sampling
 ## of INLA posteriors for the parameters of the linear predictor, and repeated
@@ -47,13 +48,12 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
   hyperpar.samples <- inla.hyperpar.sample(sample.size, result)
   s.names <- rownames(hyperpar.samples)
 
-  # Discard overdispersion marginal posterior if 'nmixnb'
-  if(fam == "nmixnb"){
-    hyperpar.samples <- hyperpar.samples[,-(ncol(hyperpar.samples))]
-  }
+  # Discard hyperpar.samples columns that are not nmix
+  hyperpar.samples <- hyperpar.samples[ , grep("beta",
+                                               colnames(hyperpar.samples))]
   n.samp.covs <- ncol(hyperpar.samples)
   if(n.lambda.covs != n.samp.covs) {
-    stop("The number of hyperparameters and covariates does not match")
+    stop("This function can not handle multiple 'nmix' components.")
   }
 
   # Combine lambda covariates and hyperparameter posteriors

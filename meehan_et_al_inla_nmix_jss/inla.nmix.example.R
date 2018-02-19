@@ -28,10 +28,12 @@ for(i in 1:n) {
 # bundle counts, lambda intercept, lambda cov
 library(INLA)
 Y <- inla.mdata(y, 1, x1)
+idx1 <- 1:n
+idx2 <- 1:n
 
 # run inla and summarize output
-result <- inla(Y ~ 1 + x2,
-         data = list(Y=Y, x2=x2),
+result <- inla(Y ~ 1 + x2 + f(idx1, model='iid') + f(idx2, model='ar1'),
+         data = list(Y=Y, x2=x2, idx1=idx1, idx2=idx2),
          family = "nmixnb",
          control.fixed = list(mean = 0, mean.intercept = 0, prec = 0.01,
                               prec.intercept = 0.01),
@@ -39,7 +41,7 @@ result <- inla(Y ~ 1 + x2,
                                             theta2 = list(param = c(0, 0.01)),
                                             theta3 = list(prior = "flat",
                                                           param = numeric()))),
-         control.compute=list(config = TRUE))
+         control.compute=list(config = TRUE, waic=T))
 summary(result)
 
 # get and evaluate fitted values
