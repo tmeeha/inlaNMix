@@ -684,26 +684,26 @@ If we define $f_i = \lambda(1-p)/i$ for $i=1, 2, \ldots$, we can make use of thi
 The log-likelihood can then be evaluated using the following simple \proglang{R} code.
 \begin{CodeInput}
 R> fac <- 1; ff <- lambda * (1-p)
-R> for(i in (n.max - y):1) fac <- 1 + fac * ff / i
+R> for(i in (N.max - y):1) fac <- 1 + fac * ff / i
 R> log.L <- dpois(y, lambda, log = TRUE) +
 +    dbinom(y, y, p, log = TRUE) + log(fac)
 \end{CodeInput}
-Since this evaluation is recursive in decreasing $n$, we have to choose the upper limit $n_\text{max}$ in advance, for example as an integer larger than $y$ so that $\frac{\lambda (1-p)}{n_\text{max}-y}$ is small. Note that we are computing \code{fac} starting with the smallest contributions, which are more numerically stable.
+Since this evaluation is recursive in decreasing $N$, we have to choose the upper limit $N_\text{max}$ in advance, for example as an integer larger than $y$ so that $\frac{\lambda (1-p)}{N_\text{max}-y}$ is small. Note that we are computing \code{fac} starting with the smallest contributions, which are more numerically stable.
 
-\section{Posterior probability for $n$}
-Currently, it is not possible to extract posteriors for $n$ when analyzing N-mixture models using \pkg{R-INLA}. This functionality, which would utilize output from the \code{inla.posterior.sample()} function, could be available in future versions based on the following logic. Assume the Poisson for $n$, such that $\textnormal{Prob} (n | \lambda) = p_0(n; \lambda)$, and
+\section{Posterior probability for $N$}
+Currently, it is not possible to extract posteriors for $N$ when analyzing N-mixture models using \pkg{R-INLA}. This functionality, which would utilize output from the \code{inla.posterior.sample()} function, could be available in future versions based on the following logic. Assume the Poisson for $N$, such that $\textnormal{Prob} (N | \lambda) = p_0(N; \lambda)$, and
 
-$$\textnormal{Prob} (y_1, ..., y_m|n) = \sum \Bigg[ \prod_{i=1}^{m} \textnormal{Bin} (y_i; n, p) \Bigg] p_0(n; \lambda),$$
+$$\textnormal{Prob} (y_1, ..., y_m|N) = \sum \bigg[ \prod_{i=1}^{m} \textnormal{Bin} (y_i; N, p) \bigg] p_0(N; \lambda),$$
 
-where $y_1, ..., y_m = \Upsilon$ and $n \geq \textnormal{max} (y_1, ..., y_m)$. If we have samples from the posterior of $(p, \lambda) | \Upsilon$, we can compute the posterior marginal of $n | \Upsilon$ as follows. If $(p, \lambda)$ is fixed, then
+where $y_1, ..., y_m = \Upsilon$, and $N \geq \textnormal{max} (y_1, ..., y_m)$. If we have samples from the posterior of $(p, \lambda) | \Upsilon$, we can compute the posterior marginal of $N | \Upsilon$ as follows. If $(p, \lambda)$ is fixed, then
 
-$$\textnormal{Prob} (n | \Upsilon) \propto \Bigg[ \prod_{i=1}^{m} \textnormal{Bin} (y_i; n, p) \Bigg] p_0 (n; \lambda),$$
+$$\textnormal{Prob} (N | \Upsilon) \propto \bigg[ \prod_{i=1}^{m} \textnormal{Bin} (y_i; N, p) \bigg] p_0 (N; \lambda),$$
 
-and this expression is evaluated for $n=\textnormal{max}(y_1, ..., y_m)$, ..., and renormalized. We can integrate out $(p, \lambda) | \Upsilon$ using samples from the posteriors, as
+and this expression is evaluated for $N = \textnormal{max}(y_1, ..., y_m)$, ..., and renormalized. We can integrate out $(p, \lambda) | \Upsilon$ using samples from the posteriors, as
 
-$$\textnormal{Prob} (n | \Upsilon) = \frac{1}{M}  \sum_{j=1}^{M} \Bigg\{ \frac{1}{Z(p_j,\lambda_j)}  \Bigg[ \prod_{i=1}^{m} \textnormal{Bin} (y_i; n, p_j) \Bigg] p_0 (n; \lambda_j) \Bigg\}.$$
+$$\textnormal{Prob} (N | \Upsilon) = \frac{1}{M}  \sum_{j=1}^{M} \frac{1}{Z(p_j,\lambda_j)}  \bigg[ \prod_{i=1}^{M} \textnormal{Bin} (y_i; N, p_j) \bigg] p_0 (N; \lambda_j),$$
 
-For $M$ samples $(p_1, \lambda_1), ..., (p_M, \lambda_M)$ from the posterior of $(p, \lambda) | \upsilon$. That is, we average the probability for each $n$, renormalize, and normalize for each sample by computing $Z (p, \lambda)$. 
+for $M$ samples $(p_1, \lambda_1), ..., (p_M, \lambda_M)$ from the posterior of $(p, \lambda) | \Upsilon$. That is, we average the probability for each $N$, renormalize, and normalize for each sample by computing $Z (p, \lambda)$. 
 	
 	
 \end{document}

@@ -29,11 +29,10 @@ for(i in 1:n) {
 library(INLA)
 Y <- inla.mdata(y, 1, x1)
 idx1 <- 1:n
-idx2 <- 1:n
 
 # run inla and summarize output
-result <- inla(Y ~ 1 + x2 + f(idx1, model='iid') + f(idx2, model='ar1'),
-         data = list(Y=Y, x2=x2, idx1=idx1, idx2=idx2),
+result <- inla(Y ~ 1 + x2 + f(idx1, model='iid'),
+         data = list(Y=Y, x2=x2, idx1=idx1),
          family = "nmixnb",
          control.fixed = list(mean = 0, mean.intercept = 0, prec = 0.01,
                               prec.intercept = 0.01),
@@ -45,6 +44,7 @@ result <- inla(Y ~ 1 + x2 + f(idx1, model='iid') + f(idx2, model='ar1'),
 summary(result)
 
 # get and evaluate fitted values
-lam.fits <- inla.nmix.lambda.fitted(result, 50)$fitted.summary
+source("inla.nmix.lambda.fitted.R")
+lam.fits <- inla.nmix.lambda.fitted(result, 500)$fitted.summary
 plot(lam.fits$median.lambda, lambdas)
 round(sum(lam.fits$median.lambda), 0); sum(Ns)
