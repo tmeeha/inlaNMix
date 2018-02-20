@@ -151,12 +151,16 @@ sim.nmix <- function(n.sites = 72, # number of study sites
 inla.nmix.lambda.fitted <- function(result, sample.size=1000,
                                     return.posteriors=FALSE,
                                     scale="exp"){
-  # Verify appropriate model type
+  # Checks and warnings
   library(INLA)
   fam <- result$.args$family
   if(length(grep(pattern = "nmix", x = fam)) == 0) {
     stop("This function is only for models with 'nmix' or 'nmixnb' likelihoods")
   }
+  if(missing(result)) stop("Please specify a model result")
+  s.check <- as.numeric(scale == "exp") + as.numeric(scale == "log")
+  if(s.check == 0) stop("Scale must be set to 'exp' or 'log'")
+  if(sample.size < 500) warning("Please increase the sample size")
 
   # Get counts and lambda covariates from 'inla.mdata' object
   mdata.obj <- result$.args$data[[1]]
@@ -171,13 +175,12 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
   hyperpar.samples <- inla.hyperpar.sample(sample.size, result)
   s.names <- rownames(hyperpar.samples)
 
-  # Discard overdispersion marginal posterior if 'nmixnb'
-  if(fam == "nmixnb"){
-    hyperpar.samples <- hyperpar.samples[,-(ncol(hyperpar.samples))]
-  }
+  # Discard hyperpar.samples columns that are not nmix
+  hyperpar.samples <- hyperpar.samples[ , grep("beta",
+                                               colnames(hyperpar.samples))]
   n.samp.covs <- ncol(hyperpar.samples)
   if(n.lambda.covs != n.samp.covs) {
-    stop("The number of hyperparameters and covariates does not match")
+    stop("This function can not handle multiple 'nmix' components.")
   }
 
   # Combine lambda covariates and hyperparameter posteriors
@@ -185,7 +188,7 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
   # For each site or site-by-year combination
   for(i in 1:n.data){
     obs <- lambda.covs[i,]
-    # For each sample from the hyperparameter approximate marginal posterior
+    # For each sample from the hyperparameter posterior
     for(j in 1:sample.size){
       post <- hyperpar.samples[j, ]
       fitted <- sum(obs * post)
@@ -230,6 +233,7 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
     out <- list(fitted.summary=fitted.summary)
   }
   return(out)
+
 } # end
 # ##############################################################################
 
@@ -814,10 +818,10 @@ colnames(inla.out.tab.2) <- c("X1", "X2", "X3")
 # combine out
 all.out.tab.2 <- round(rbind(unmk.out.tab.2, inla.out.tab.2),2)
 colnames(all.out.tab.2) <- c("Estimate","Lower", "Upper")
-all.out.tab.2$Parameter <- factor(rep(c("logit(p) intercept",
+all.out.tab.2$Parameter <- factor(rep(c("logit(p) Intercept",
                                         "Survey intensity",
-                                        "Survey date (SD)", "SD squared",
-                                        "log(lambda) intercept",
+                                        "Survey date", "Date squared",
+                                        "log(lambda) Intercept",
                                         "Transect length", "Transect elevation",
                                         "Forest cover",
                                         "Overdispersion"), 2))
