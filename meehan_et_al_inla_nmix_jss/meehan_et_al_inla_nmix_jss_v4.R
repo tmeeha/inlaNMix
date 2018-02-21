@@ -92,7 +92,7 @@ sim.nmix <- function(n.sites = 72, # number of study sites
   # create detection covariate values
   x1.p <- array(x1[,1], dim = c(n.sites, n.surveys, n.years))
   x4 <- array(as.numeric(scale(runif(n = n.sites * n.surveys * n.years,
-                                     -0.5, 0.5), scale = F)), dim = c(n.sites, n.surveys, n.years))
+    -0.5, 0.5), scale = F)), dim = c(n.sites, n.surveys, n.years))
 
   # average x4 per site-year for ex 1
   x4.m <- apply(x4, c(1, 3), mean, na.rm = F)
@@ -280,7 +280,7 @@ summary(out.inla.1, digits = 3)
 
 # get fitted values
 out.inla.1.lambda.fits <- inla.nmix.lambda.fitted(result = out.inla.1,
-                                                  sample.size = 5000, return.posteriors = FALSE)$fitted.summary
+  sample.size = 5000, return.posteriors = FALSE)$fitted.summary
 head(out.inla.1.lambda.fits)
 
 # compare fitted and true lambdas
@@ -721,15 +721,15 @@ round(simu.time.1 <- proc.time() - ptm, 2)[3]
 
 # explore results, example 2 ###################################################
 sim.out$parf <- factor(sim.out$par, labels=c("alpha[0]",
-                                             "alpha[1]", "alpha[4]", "beta[0]", "beta[1]", "beta[2]",
-                                             "beta[3]", "theta"))
+  "alpha[1]", "alpha[4]", "beta[0]", "beta[1]", "beta[2]",
+  "beta[3]", "theta"))
 # plot
 png("fig2.png", width = 6, height = 5, units = 'in', res = 600)
 ggplot(data=sim.out, aes(x=a4, y=diffs, colour=simtype, linetype=simtype)) +
   geom_point(pch=1, size=1.3) +
   facet_wrap(~factor(parf), scales="fixed",labeller=label_parsed) +
-  xlab(expression(paste("Value of ", alpha[0]))) +
-  ylab("Difference between posterior mean and true parameter value") +
+  xlab(expression(paste("Value of ", alpha[0], " used to simulate data"))) +
+  ylab("Difference between posterior median and true parameter value") +
   geom_smooth(span=3, se=F, size=0.6) +
   theme_acbs() + scale_color_manual(values=c("black","gray50")) +
   theme(strip.background = element_rect(colour = "black", fill = "white"),
