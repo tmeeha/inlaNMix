@@ -92,7 +92,7 @@ sim.nmix <- function(n.sites = 72, # number of study sites
   # create detection covariate values
   x1.p <- array(x1[,1], dim = c(n.sites, n.surveys, n.years))
   x4 <- array(as.numeric(scale(runif(n = n.sites * n.surveys * n.years,
-                                     -0.5, 0.5), scale = F)), dim = c(n.sites, n.surveys, n.years))
+    -0.5, 0.5), scale = F)), dim = c(n.sites, n.surveys, n.years))
 
   # average x4 per site-year for ex 1
   x4.m <- apply(x4, c(1, 3), mean, na.rm = F)
@@ -151,12 +151,16 @@ sim.nmix <- function(n.sites = 72, # number of study sites
 inla.nmix.lambda.fitted <- function(result, sample.size=1000,
                                     return.posteriors=FALSE,
                                     scale="exp"){
-  # Verify appropriate model type
+  # Checks and warnings
   library(INLA)
   fam <- result$.args$family
   if(length(grep(pattern = "nmix", x = fam)) == 0) {
     stop("This function is only for models with 'nmix' or 'nmixnb' likelihoods")
   }
+  if(missing(result)) stop("Please specify a model result")
+  s.check <- as.numeric(scale == "exp") + as.numeric(scale == "log")
+  if(s.check == 0) stop("Scale must be set to 'exp' or 'log'")
+  if(sample.size < 500) warning("Please increase the sample size")
 
   # Get counts and lambda covariates from 'inla.mdata' object
   mdata.obj <- result$.args$data[[1]]
@@ -171,13 +175,12 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
   hyperpar.samples <- inla.hyperpar.sample(sample.size, result)
   s.names <- rownames(hyperpar.samples)
 
-  # Discard overdispersion marginal posterior if 'nmixnb'
-  if(fam == "nmixnb"){
-    hyperpar.samples <- hyperpar.samples[,-(ncol(hyperpar.samples))]
-  }
+  # Discard hyperpar.samples columns that are not nmix
+  hyperpar.samples <- hyperpar.samples[ , grep("beta",
+                                               colnames(hyperpar.samples))]
   n.samp.covs <- ncol(hyperpar.samples)
   if(n.lambda.covs != n.samp.covs) {
-    stop("The number of hyperparameters and covariates does not match")
+    stop("This function can not handle multiple 'nmix' components.")
   }
 
   # Combine lambda covariates and hyperparameter posteriors
@@ -185,7 +188,7 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
   # For each site or site-by-year combination
   for(i in 1:n.data){
     obs <- lambda.covs[i,]
-    # For each sample from the hyperparameter approximate marginal posterior
+    # For each sample from the hyperparameter posterior
     for(j in 1:sample.size){
       post <- hyperpar.samples[j, ]
       fitted <- sum(obs * post)
@@ -230,6 +233,7 @@ inla.nmix.lambda.fitted <- function(result, sample.size=1000,
     out <- list(fitted.summary=fitted.summary)
   }
   return(out)
+
 } # end
 # ##############################################################################
 
@@ -276,7 +280,7 @@ summary(out.inla.1, digits = 3)
 
 # get fitted values
 out.inla.1.lambda.fits <- inla.nmix.lambda.fitted(result = out.inla.1,
-                                                  sample.size = 5000, return.posteriors = FALSE)$fitted.summary
+  sample.size = 5000, return.posteriors = FALSE)$fitted.summary
 head(out.inla.1.lambda.fits)
 
 # compare fitted and true lambdas
@@ -717,15 +721,15 @@ round(simu.time.1 <- proc.time() - ptm, 2)[3]
 
 # explore results, example 2 ###################################################
 sim.out$parf <- factor(sim.out$par, labels=c("alpha[0]",
-                                             "alpha[1]", "alpha[4]", "beta[0]", "beta[1]", "beta[2]",
-                                             "beta[3]", "theta"))
+  "alpha[1]", "alpha[4]", "beta[0]", "beta[1]", "beta[2]",
+  "beta[3]", "theta"))
 # plot
 png("fig2.png", width = 6, height = 5, units = 'in', res = 600)
 ggplot(data=sim.out, aes(x=a4, y=diffs, colour=simtype, linetype=simtype)) +
   geom_point(pch=1, size=1.3) +
   facet_wrap(~factor(parf), scales="fixed",labeller=label_parsed) +
-  xlab(expression(paste("Value of ", alpha[0]))) +
-  ylab("Difference between posterior mean and true parameter value") +
+  xlab(expression(paste("Value of ", alpha[0], " used to simulate data"))) +
+  ylab("Difference between posterior median and true parameter value") +
   geom_smooth(span=3, se=F, size=0.6) +
   theme_acbs() + scale_color_manual(values=c("black","gray50")) +
   theme(strip.background = element_rect(colour = "black", fill = "white"),
@@ -814,10 +818,10 @@ colnames(inla.out.tab.2) <- c("X1", "X2", "X3")
 # combine out
 all.out.tab.2 <- round(rbind(unmk.out.tab.2, inla.out.tab.2),2)
 colnames(all.out.tab.2) <- c("Estimate","Lower", "Upper")
-all.out.tab.2$Parameter <- factor(rep(c("logit(p) intercept",
+all.out.tab.2$Parameter <- factor(rep(c("logit(p) Intercept",
                                         "Survey intensity",
-                                        "Survey date (SD)", "SD squared",
-                                        "log(lambda) intercept",
+                                        "Survey date", "Date squared",
+                                        "log(lambda) Intercept",
                                         "Transect length", "Transect elevation",
                                         "Forest cover",
                                         "Overdispersion"), 2))
