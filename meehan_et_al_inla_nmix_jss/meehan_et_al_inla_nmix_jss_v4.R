@@ -728,7 +728,7 @@ png("fig2.png", width = 6, height = 5, units = 'in', res = 600)
 ggplot(data=sim.out, aes(x=a4, y=diffs, colour=simtype, linetype=simtype)) +
   geom_point(pch=1, size=1.3) +
   facet_wrap(~factor(parf), scales="fixed",labeller=label_parsed) +
-  xlab(expression(paste("Value of ", alpha[0], " used to simulate data"))) +
+  xlab(expression(paste("Value of ", alpha[4], " used to simulate data"))) +
   ylab("Difference between posterior median and true parameter value") +
   geom_smooth(span=3, se=F, size=0.6) +
   theme_acbs() + scale_color_manual(values=c("black","gray50")) +
