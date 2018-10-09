@@ -41,9 +41,9 @@ Dail D, Madsen L (2011).
   Open Metapopulation.}
 \newblock \emph{Biometrics}, \textbf{67}(2), 577--587.
 
-\bibitem[{Denes \emph{et~al.}(2015)Denes, Silveira, and
+\bibitem[{D\'{e}nes \emph{et~al.}(2015)D\'{e}nes, Silveira, and
   Beissinger}]{Denes_Silveira_Beissinger_2015}
-Denes FV, Silveira LF, Beissinger SR (2015).
+D\'{e}nes FV, Silveira LF, Beissinger SR (2015).
 \newblock \enquote{Estimating Abundance of Unmarked Animal Populations:
   Accounting for Imperfect Detection and Other Sources of Zero Inflation.}
 \newblock \emph{Methods in Ecology and Evolution}, \textbf{6}(5), 543--556.
@@ -65,7 +65,7 @@ Dodd CK, Dorazio RM (2004).
 \bibitem[{Fiske and Chandler(2011)}]{Fiske_Chandler_2011}
 Fiske I, Chandler R (2011).
 \newblock \enquote{\pkg{unmarked}: An \proglang{R} Package for Fitting
-  Hierarchical models of Wildlife Occurrence and Abundance.}
+  Hierarchical Models of Wildlife Occurrence and Abundance.}
 \newblock \emph{Journal of Statistical Software}, \textbf{43}(10), 1--23.
 \newblock \urlprefix\url{http://www.jstatsoft.org/v43/i10/}.
 
@@ -83,41 +83,41 @@ Joseph LN, Elkin C, Martin TG, Possingham HP (2009).
   Considering Ecological Mechanisms.}
 \newblock \emph{Ecological Applications}, \textbf{19}(3), 631--642.
 
-\bibitem[{Kery(2010)}]{Kery_2010}
-Kery M (2010).
+\bibitem[{K\'{e}ry(2010)}]{Kery_2010}
+K\'{e}ry M (2010).
 \newblock \emph{Introduction to \proglang{WinBUGS} for Ecologists: Bayesian
   Approach to Regression, ANOVA, Mixed Models and Related Analyses}.
 \newblock Academic Press, Burlington, MA USA.
 
-\bibitem[{Kery \emph{et~al.}(2009)Kery, Dorazio, Soldaat, Van~Strien,
+\bibitem[{K\'{e}ry \emph{et~al.}(2009)K\'{e}ry, Dorazio, Soldaat, Van~Strien,
   Zuiderwijk, and
   Royle}]{Kery_Dorazio_Soldaat_Van_Strien_Zuiderwijk_Royle_2009}
-Kery M, Dorazio RM, Soldaat L, Van~Strien A, Zuiderwijk A, Royle JA (2009).
+K\'{e}ry M, Dorazio RM, Soldaat L, Van~Strien A, Zuiderwijk A, Royle JA (2009).
 \newblock \enquote{Trend Estimation in Populations with Imperfect Detection.}
 \newblock \emph{Journal of Applied Ecology}, \textbf{46}(6), 1163--1172.
 
-\bibitem[{Kery and Royle(2010)}]{Kery_Royle_2010}
-Kery M, Royle JA (2010).
+\bibitem[{K\'{e}ry and Royle(2010)}]{Kery_Royle_2010}
+K\'{e}ry M, Royle JA (2010).
 \newblock \enquote{Hierarchical Modelling and Estimation of Abundance and
   Population Trends in Metapopulation Designs.}
 \newblock \emph{Journal of Animal Ecology}, \textbf{79}(2), 453--461.
 
-\bibitem[{Kery and Royle(2015)}]{Kery_Royle_2015}
-Kery M, Royle JA (2015).
+\bibitem[{K\'{e}ry and Royle(2015)}]{Kery_Royle_2015}
+K\'{e}ry M, Royle JA (2015).
 \newblock \emph{Applied Hierarchical Modeling in Ecology: Analysis of
   Distribution, Abundance and Species Richness in \proglang{R} and
   \proglang{BUGS}: Volume 1: Prelude and Static Models}.
 \newblock Academic Press, Burlington, MA USA.
 
-\bibitem[{Kery \emph{et~al.}(2005)Kery, Royle, and
+\bibitem[{K\'{e}ry \emph{et~al.}(2005)K\'{e}ry, Royle, and
   Schmid}]{Kery_Royle_Schmid_2005}
-Kery M, Royle JA, Schmid H (2005).
+K\'{e}ry M, Royle JA, Schmid H (2005).
 \newblock \enquote{Modeling Avian Abundance from Replicated Counts using
   Binomial Mixture Models.}
 \newblock \emph{Ecological Applications}, \textbf{15}(4), 1450--1461.
 
-\bibitem[{Kery and Schaub(2011)}]{Kery_Schaub_2011}
-Kery M, Schaub M (2011).
+\bibitem[{K\'{e}ry and Schaub(2011)}]{Kery_Schaub_2011}
+K\'{e}ry M, Schaub M (2011).
 \newblock \emph{Bayesian Population Analysis using \proglang{WinBUGS}: A
   Hierarchical Perspective}.
 \newblock Academic Press, Burlington, MA USA.
@@ -152,9 +152,9 @@ Lunn D, Jackson C, Best N, Thomas A, Spiegelhalter D (2012).
   Analysis}.
 \newblock CRC press, Boca Raton, FL USA.
 
-\bibitem[{Martin \emph{et~al.}(2011)Martin, Royle, Mackenzie, Edwards, Kery,
-  and Gardner}]{Martin_Royle_Mackenzie_Edwards_Kery_Gardner_2011}
-Martin J, Royle JA, Mackenzie DI, Edwards HH, Kery M, Gardner B (2011).
+\bibitem[{Martin \emph{et~al.}(2011)Martin, Royle, Mackenzie, Edwards,
+  K\'{e}ry, and Gardner}]{Martin_Royle_Mackenzie_Edwards_Kery_Gardner_2011}
+Martin J, Royle JA, Mackenzie DI, Edwards HH, K\'{e}ry M, Gardner B (2011).
 \newblock \enquote{Accounting for Non-Independent Detection when Estimating
   Abundance of Organisms with a Bayesian Approach.}
 \newblock \emph{Methods in Ecology and Evolution}, \textbf{2}(6), 595--601.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.10)  10 AUG 2018 08:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.10)  9 OCT 2018 12:16
 entering extended mode
 **./meehan_et_al_nmix_v4.tex
 (meehan_et_al_nmix_v4.tex
@@ -380,27 +380,27 @@ LaTeX Info: Redefining \] on input line 2818.
 (meehan_et_al_nmix_v4.aux)
 \openout1 = `meehan_et_al_nmix_v4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 72.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -429,7 +429,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 72.
+Package hyperref Info: Link coloring ON on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -439,9 +439,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count120
 )
-LaTeX Info: Redefining \ref on input line 72.
-LaTeX Info: Redefining \pageref on input line 72.
-LaTeX Info: Redefining \nameref on input line 72.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (meehan_et_al_nmix_v4.out) (meehan_et_al_nmix_v4.out)
 \@outlinefile=\write4
@@ -451,16 +451,16 @@ LaTeX Info: Redefining \nameref on input line 72.
 <jsslogo.jpg, id=99, 540.0175pt x 393.47pt>
 File: jsslogo.jpg Graphic file (type jpg)
  <use jsslogo.jpg>
-Package pdftex.def Info: jsslogo.jpg used on input line 72.
+Package pdftex.def Info: jsslogo.jpg used on input line 91.
 (pdftex.def)             Requested size: 89.80768pt x 65.43607pt.
-LaTeX Font Info:    Try loading font information for T1+pzc on input line 72.
+LaTeX Font Info:    Try loading font information for T1+pzc on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
 File: t1pzc.fd 2001/06/04 font definitions for T1/pzc.
 )
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <28> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 72.
-LaTeX Font Info:    Try loading font information for T1+aess on input line 72.
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 91.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
@@ -468,19 +468,19 @@ File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./jsslogo.jpg>]
 LaTeX Font Info:    Font shape `T1/aer/b/sl' in size <10.95> not available
-(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 92.
+(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 155.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 2 []
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 102.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 181.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (1.9303pt too wide) in paragraph at lines 102--103
+Overfull \hbox (1.9303pt too wide) in paragraph at lines 177--197
 []\T1/aer/m/n/10.95 Much of the code used to con-duct the \T1/aer/b/n/10.95 R-I
 NLA \T1/aer/m/n/10.95 anal-y-ses is shown in the body of this manuscript.
  []
@@ -506,22 +506,19 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [6]
-Underfull \vbox (badness 2753) has occurred while \output is active []
-
-
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 7
  []
 
 [7]
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 235
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 366
 .
-LaTeX Font Info:    No file TS1aett.fd. on input line 235.
+LaTeX Font Info:    No file TS1aett.fd. on input line 366.
 
 
 LaTeX Font Warning: Font shape `TS1/aett/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textquotesingle' on input line 235.
+(Font)              for symbol `textquotesingle' on input line 366.
 
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
@@ -538,10 +535,10 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 10 []
  []
 
-[10] <fig1.png, id=305, 433.62pt x 361.35pt>
+[10] <fig1.png, id=309, 433.62pt x 361.35pt>
 File: fig1.png Graphic file (type png)
  <use fig1.png>
-Package pdftex.def Info: fig1.png used on input line 374.
+Package pdftex.def Info: fig1.png used on input line 505.
 (pdftex.def)             Requested size: 442.65375pt x 368.89743pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -564,14 +561,17 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 15
  []
 
-[15] <fig2.png, id=343, 433.62pt x 361.35pt>
+[15] <fig2.png, id=344, 433.62pt x 361.35pt>
 File: fig2.png Graphic file (type png)
  <use fig2.png>
-Package pdftex.def Info: fig2.png used on input line 481.
+Package pdftex.def Info: fig2.png used on input line 661.
 (pdftex.def)             Requested size: 442.65375pt x 368.89743pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -593,10 +593,10 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 19
  []
 
-[19] <fig3.png, id=370, 357.0138pt x 252.945pt>
+[19] <fig3.png, id=373, 357.0138pt x 252.945pt>
 File: fig3.png Graphic file (type png)
  <use fig3.png>
-Package pdftex.def Info: fig3.png used on input line 618.
+Package pdftex.def Info: fig3.png used on input line 820.
 (pdftex.def)             Requested size: 361.34999pt x 256.02435pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -609,6 +609,9 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [21 <./fig3.png>]
+Underfull \vbox (badness 1286) has occurred while \output is active []
+
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 22 []
  []
@@ -616,14 +619,15 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [22] (meehan_et_al_nmix_v4.bbl
 LaTeX Font Info:    Font shape `T1/aer/b/it' in size <10.95> not available
 (Font)              Font shape `T1/aer/bx/it' tried instead on input line 20.
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10.95> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 89.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 23
  []
 
 [23]
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10.95> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 89.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 24 []
  []
@@ -631,11 +635,11 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [24])
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 649.
+(hyperref)                removing `math shift' on input line 876.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 649.
+(hyperref)                removing `math shift' on input line 876.
 
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -646,7 +650,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 670.
+(amsmath)                 on input line 912.
 
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -654,42 +658,42 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 709--709
+Underfull \hbox (badness 10000) in paragraph at lines 970--970
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--709
+Underfull \hbox (badness 10000) in paragraph at lines 970--970
 
  []
 
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 709.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 709.
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 970.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 970.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 27
  []
 
 [27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 709.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 970.
  (meehan_et_al_nmix_v4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 709.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 709.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 970.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 970.
 Package rerunfilecheck Info: File `meehan_et_al_nmix_v4.out' has not changed.
 (rerunfilecheck)             Checksum: D2F6BE63911556581CA1537A637F7DB9;2147.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 709.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 970.
  ) 
 Here is how much of TeX's memory you used:
- 7711 strings out of 493329
- 113667 string characters out of 3139057
- 200216 words of memory out of 3000000
- 10963 multiletter control sequences out of 15000+200000
- 69780 words of font info for 114 fonts, out of 3000000 for 9000
+ 7732 strings out of 493329
+ 113839 string characters out of 3139057
+ 200539 words of memory out of 3000000
+ 10974 multiletter control sequences out of 15000+200000
+ 71433 words of font info for 116 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,11n,34p,1472b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{C:/Pr
@@ -715,9 +719,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/cm-super/sfrm1095.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/z
 apfchan/uzcmi8a.pfb>
-Output written on meehan_et_al_nmix_v4.pdf (27 pages, 687563 bytes).
+Output written on meehan_et_al_nmix_v4.pdf (27 pages, 689565 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
