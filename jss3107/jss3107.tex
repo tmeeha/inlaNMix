@@ -565,7 +565,7 @@ R> sum(c(sim.data$N.tr))
 
 %% figure 1
 \begin{figure}[p]
-\includegraphics[width=\linewidth]{fig1.png}
+\includegraphics[width=\linewidth]{jss3107fig1.png}
 \caption{Marginal posteriors of model parameters from \pkg{R-INLA} (dashed black lines) and \proglang{JAGS} (solid gray lines), along with Maximum Liklihood estimates (black circles) and 95\% confidence intervals (horizontal black lines) from \pkg{unmarked}.  True input values are represented by vertical black lines.}
 \label{fig:fig1}
 \end{figure}
@@ -719,7 +719,7 @@ Parameter values entered into \code{sim.nmix()}, other than those for $\alpha_4$
 
 %% figure 2
 \begin{figure}
-\includegraphics[width=\linewidth]{fig2.png}
+\includegraphics[width=\linewidth]{jss3107fig2.png}
 \caption{Differences between posterior median parameter values and true input parameter values as a function of the $\alpha_4$ value used to simulate data. Black circles and lines are from the model with the site-survey-year covariate, \code{x4}, and gray circles and lines are from the model with an averaged site-year covariate, \code{x4.m}. Parameter name is given in the strip across the top of each panel.}
 \label{fig:fig2}
 \end{figure}
@@ -884,7 +884,7 @@ Estimate          SE       z    P(>|z|)
 
 %% figure 3
 \begin{figure}[p]
-  \includegraphics[width=5in]{fig3.png}
+  \includegraphics[width=5in]{jss3107fig3.png}
   \caption{Parameter estimates and 95\% confidence intervals from \pkg{unmarked} (gray circles and lines) and posterior medians and 95\% credible intervals from \pkg{R-INLA} (black circles and lines) from an N-mixture model analysis of mallard duck abundance. Model parameters are identified by their associated variable names listed on the vertical axis.  The \pkg{unmarked} model included site-survey covariates for survey intensity and survey date, while the \pkg{R-INLA} model included site-averaged versions. A value of zero (no effect) is depicted by the vertical dashed gray line.}
   \label{fig:fig3}
 \end{figure}
@@ -930,7 +930,7 @@ available (but see Appendix). In cases where site-survey covariates are
 particularly important, and not otherwise controlled by survey design, where 
 different mixed distributions are required, or where random effects 
 associated with $\lambda$ are needed, an MCMC approach appears to be most 
-appropriate (Fig. \ref{fig:fig2}).
+appropriate (Fig. \ref{fig:jss3107fig2}).
 
 When compared to \pkg{unmarked}, the \pkg{R-INLA} approach is similar in 
 regards to familiar model syntax and data format. The approaches are also 
@@ -952,7 +952,7 @@ In conclusion, \pkg{R-INLA}, \proglang{JAGS} (and \proglang{WinBUGS}, \proglang{
 We thank C. Burkhalter, T. Onkelinx, U. Halekoh, E. Pebesma, and an anonymous reviewer for commenting on previous drafts of this manuscript.
 
 %% references
-\bibliography{bibliog}
+\bibliography{jss3107}
 
 %% appendix
 \appendix

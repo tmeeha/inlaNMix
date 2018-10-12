@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.10)  12 OCT 2018 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.10)  12 OCT 2018 17:45
 entering extended mode
-**./meehan_et_al_nmix_v4.tex
-(meehan_et_al_nmix_v4.tex
+**./jss3107.tex
+(jss3107.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 76 language(s) loaded.
 (jss.cls
@@ -376,9 +376,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-)
-(meehan_et_al_nmix_v4.aux)
-\openout1 = `meehan_et_al_nmix_v4.aux'.
+) (jss3107.aux)
+\openout1 = `jss3107.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
 LaTeX Font Info:    ... okay on input line 91.
@@ -443,19 +442,18 @@ LaTeX Info: Redefining \ref on input line 91.
 LaTeX Info: Redefining \pageref on input line 91.
 LaTeX Info: Redefining \nameref on input line 91.
 
-(meehan_et_al_nmix_v4.out) (meehan_et_al_nmix_v4.out)
+(jss3107.out) (jss3107.out)
 \@outlinefile=\write4
-\openout4 = `meehan_et_al_nmix_v4.out'.
+\openout4 = `jss3107.out'.
 
-
-<jsslogo.jpg, id=99, 540.0175pt x 393.47pt>
+ <jsslogo.jpg, id=99, 540.0175pt x 393.47pt>
 File: jsslogo.jpg Graphic file (type jpg)
- <use jsslogo.jpg>
+
+<use jsslogo.jpg>
 Package pdftex.def Info: jsslogo.jpg used on input line 91.
 (pdftex.def)             Requested size: 89.80768pt x 65.43607pt.
 LaTeX Font Info:    Try loading font information for T1+pzc on input line 91.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pzc.fd"
 File: t1pzc.fd 2001/06/04 font definitions for T1/pzc.
 )
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <28> not available
@@ -535,10 +533,10 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 10 []
  []
 
-[10] <fig1.png, id=307, 433.62pt x 361.35pt>
-File: fig1.png Graphic file (type png)
- <use fig1.png>
-Package pdftex.def Info: fig1.png used on input line 568.
+[10] <jss3107fig1.png, id=307, 433.62pt x 361.35pt>
+File: jss3107fig1.png Graphic file (type png)
+ <use jss3107fig1.png>
+Package pdftex.def Info: jss3107fig1.png used on input line 568.
 (pdftex.def)             Requested size: 442.65375pt x 368.89743pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -550,7 +548,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 12 []
  []
 
-[12 <./fig1.png>]
+[12 <./jss3107fig1.png>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
  []
@@ -568,10 +566,10 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 15
  []
 
-[15] <fig2.png, id=342, 433.62pt x 361.35pt>
-File: fig2.png Graphic file (type png)
- <use fig2.png>
-Package pdftex.def Info: fig2.png used on input line 722.
+[15] <jss3107fig2.png, id=342, 433.62pt x 361.35pt>
+File: jss3107fig2.png Graphic file (type png)
+ <use jss3107fig2.png>
+Package pdftex.def Info: jss3107fig2.png used on input line 722.
 (pdftex.def)             Requested size: 442.65375pt x 368.89743pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -583,7 +581,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 17
  []
 
-[17 <./fig2.png>]
+[17 <./jss3107fig2.png>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 18 []
  []
@@ -593,10 +591,10 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 19
  []
 
-[19] <fig3.png, id=371, 357.0138pt x 252.945pt>
-File: fig3.png Graphic file (type png)
- <use fig3.png>
-Package pdftex.def Info: fig3.png used on input line 887.
+[19] <jss3107fig3.png, id=371, 357.0138pt x 252.945pt>
+File: jss3107fig3.png Graphic file (type png)
+ <use jss3107fig3.png>
+Package pdftex.def Info: jss3107fig3.png used on input line 887.
 (pdftex.def)             Requested size: 361.34999pt x 256.02435pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
@@ -608,7 +606,12 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 21
  []
 
-[21 <./fig3.png>]
+[21 <./jss3107fig3.png>]
+
+LaTeX Warning: Reference `fig:jss3107fig2' on page 22 undefined on input line 9
+33.
+
+
 Underfull \vbox (badness 1286) has occurred while \output is active []
 
 
@@ -616,7 +619,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 22 []
  []
 
-[22] (meehan_et_al_nmix_v4.bbl
+[22] (jss3107.bbl
 LaTeX Font Info:    Font shape `T1/aer/b/it' in size <10.95> not available
 (Font)              Font shape `T1/aer/bx/it' tried instead on input line 20.
 
@@ -678,26 +681,29 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 
 [27]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1054.
- (meehan_et_al_nmix_v4.aux)
+ (jss3107.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1054.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1054.
 
-Package rerunfilecheck Info: File `meehan_et_al_nmix_v4.out' has not changed.
+Package rerunfilecheck Info: File `jss3107.out' has not changed.
 (rerunfilecheck)             Checksum: D2F6BE63911556581CA1537A637F7DB9;2147.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1054.
  ) 
 Here is how much of TeX's memory you used:
- 7731 strings out of 493329
- 113803 string characters out of 3139057
- 200539 words of memory out of 3000000
- 10973 multiletter control sequences out of 15000+200000
+ 7728 strings out of 493329
+ 113556 string characters out of 3139057
+ 200467 words of memory out of 3000000
+ 10971 multiletter control sequences out of 15000+200000
  71433 words of font info for 116 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,11n,34p,1472b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,11n,34p,1459b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -721,9 +727,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/cm-super/sfrm1095.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/z
 apfchan/uzcmi8a.pfb>
-Output written on meehan_et_al_nmix_v4.pdf (27 pages, 689290 bytes).
+Output written on jss3107.pdf (27 pages, 689431 bytes).
 PDF statistics:
- 566 PDF objects out of 1000 (max. 8388607)
- 124 named destinations out of 1000 (max. 500000)
+ 564 PDF objects out of 1000 (max. 8388607)
+ 123 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
